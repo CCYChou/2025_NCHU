@@ -68,3 +68,19 @@ The purpose of this project is to simulate a simple grid-based environment where
 1. **Install Dependencies:**
    ```bash
    pip install flask
+
+2. **Start the Flask Application:**
+bash
+   ```bash
+   python app.py
+
+3. **Access the Application: **
+Open your web browser and navigate to http://127.0.0.1:5000/ to interact with the grid interface.
+
+4. **Web 1 **
+![image](https://github.com/user-attachments/assets/e2e56081-5c8c-4911-87af-a43b9e2cb800)
+
+5. **Web 2 **
+ ![image](https://github.com/user-attachments/assets/ab3945ce-b80f-4e03-ad04-64909f631e4a)
+
+
