@@ -74,18 +74,24 @@ The purpose of this project is to simulate a simple grid-based environment where
    ```bash
    python app.py
 
-3. **Access the Application: **
- ```bash
-  Open your web browser and navigate to http://127.0.0.1:5000/ to interact with the grid interface.
 
+3. **Access the Application:**
 
-4. **Web1:**
+   ```bash
+   Open your web browser and navigate to http://127.0.0.1:5000/ to interact with the grid interface.
+
+4. **WebSite1:**
+
    ```bash
    ![image](https://github.com/user-attachments/assets/e2e56081-5c8c-4911-87af-a43b9e2cb800)
 
+5. **WebSit2:**
 
-6. **Web 2:**
-  ```bash
- ![image](https://github.com/user-attachments/assets/ab3945ce-b80f-4e03-ad04-64909f631e4a)
+   ```bash
+   ![image](https://github.com/user-attachments/assets/ab3945ce-b80f-4e03-ad04-64909f631e4a)
+
+
+
+
 
 
