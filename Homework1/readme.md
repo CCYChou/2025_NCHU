@@ -82,13 +82,13 @@ The purpose of this project is to simulate a simple grid-based environment where
 
 4. **WebSite1:**
 
-   ```bash
+   
    ![image](https://github.com/user-attachments/assets/ec7363fa-f3c7-4676-98d6-93267fbe8494)
 
 
 5. **WebSit2:**
 
-   ```bash
+   
    ![image](https://github.com/user-attachments/assets/e70f36cb-e047-443d-9ad0-87487c61b421)
 
 
