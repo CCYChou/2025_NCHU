@@ -1,69 +1,67 @@
-# Grid World 價值迭代與最佳政策推導系統
+# Grid World Optimal Policy Application
 
-本專案是一個互動式 Grid World 系統，利用價值迭代算法推導每個格子的最佳政策與狀態價值，並直覺化展示最佳路徑。專案採用 Flask 作為後端，結合 HTML/CSS/JavaScript 進行前端互動與視覺化展示。以下根據 CRISP-DM 流程詳細介紹各階段內容。
+This project utilizes Flask to demonstrate a visual interactive implementation of the Value Iteration algorithm in a Grid World environment. Users can intuitively set start, end, and obstacle states on a grid and visualize the optimal policy derived through Value Iteration.
 
----
+## CRISP-DM Methodology
 
-## 1. 業務理解 (Business Understanding)
+### 1. Business Understanding
 
-在強化學習與決策支援的領域中，理解並直觀展示各狀態的期望回報及最佳行動是一項重要任務。本系統主要目標包括：
-- **直覺化展示**：提供一個互動式 Grid World，讓使用者可以透過點選格子設定起點、終點與障礙物。
-- **最佳政策推導**：利用價值迭代算法計算每個狀態的期望回報 \(V(s)\) 及最佳行動 (例如：上、下、左、右)。
-- **路徑高亮**：從起點開始依據最佳政策逐步走到終點，並以高亮顯示最佳路徑，幫助使用者理解決策過程。
+#### Objective:
+- Provide a visual, interactive educational tool to understand and demonstrate the Value Iteration algorithm for solving Markov Decision Processes (MDPs).
 
----
+#### Requirements:
+- Visual representation of states and transitions.
+- Easy setting of start, end, and obstacles.
+- Clear visualization of optimal policy and value functions.
 
-## 2. 資料理解 (Data Understanding)
+### 2. Data Understanding
 
-資料以 Grid 形式呈現，每個格子包含以下屬性：
-- **起點 (Start)**：系統的開始狀態。
-- **終點 (End)**：目標狀態，抵達後獲得正向獎勵。
-- **障礙物 (Obstacle)**：不可進入的狀態。
-- **價值 (Value)**：透過價值迭代算法計算得到的狀態期望回報 \(V(s)\)。
-- **最佳政策 (Policy)**：依據計算結果推導出的最佳行動方向。
-- **高亮 (Highlight)**：用來標記最佳路徑的屬性，方便在前端顯示時進行視覺強調。
+#### Data Description:
+- Grid represented as a two-dimensional array.
+- Each cell state includes attributes:
+  - `start`: Boolean (Starting cell)
+  - `end`: Boolean (Goal cell)
+  - `obstacle`: Boolean (Non-accessible cell)
+  - `value`: Float (State-value)
+  - `policy`: String (Optimal action)
+  - `highlight`: Boolean (Optimal path visibility)
 
-這些資料均存放於一個二維陣列中，並通過 JSON 格式於前後端間進行傳遞。
+### 3. Data Preparation
 
----
+#### Processing:
+- Grid initialization based on user inputs.
+- JSON-formatted data for backend processing.
+- Continuous updates based on frontend interaction.
 
-## 3. 資料準備 (Data Preparation)
+### 4. Modeling
 
-資料準備主要包括：
-- **Grid 初始化**：建立一個預設大小（例如 5x5）的 Grid，並為每個格子初始化屬性（起點、終點、障礙物、價值、政策、高亮）。
-- **狀態標記**：透過前端互動，使用者可將格子標記為起點、終點或障礙物，也可使用「清除」功能重設某格狀態。
-- **資料結構設計**：每個格子以 JSON 物件方式儲存，並於按下「計算最佳政策」時將整個 Grid 傳送至後端進行運算。
+#### Algorithm:
+- **Value Iteration Algorithm**:
+  - Iteratively calculates optimal values for each state.
+  - Determines the optimal policy for maximizing cumulative rewards.
 
----
+#### Parameters:
+- Discount factor (`GAMMA`): `0.9`
+- Convergence threshold (`THRESHOLD`): `1e-3`
+- Step reward (`REWARD_STEP`): `-0.01`
+- Goal reward (`REWARD_GOAL`): `1.0`
 
-## 4. 建模 (Modeling)
+### 5. Evaluation
 
-本專案使用 **價值迭代算法** 作為核心建模技術：
-- **價值迭代**：不斷更新每個格子的 \(V(s)\)，直到收斂到預設的閾值為止。
-- **最佳政策推導**：根據最終收斂的 \(V(s)\) 值，對每個非障礙狀態選取使期望回報最大的行動方向。
-- **最佳路徑高亮**：從起點依據最佳政策逐步走向終點，並將路徑上的格子標記為高亮，方便前端直觀展示最佳路徑。
+#### Metrics:
+- Convergence checked through threshold-based stopping criteria.
+- Optimal policy visually validated through highlighted paths.
 
----
+#### User Validation:
+- Interactive frontend allows for intuitive assessment and real-time visualization of policy changes.
 
-## 5. 評估 (Evaluation)
+### 6. Deployment
 
-評估階段主要考量：
-- **算法正確性**：驗證價值迭代算法能夠正確收斂並推導出合理的狀態價值與最佳政策。
-- **視覺化效果**：前端頁面是否能清楚顯示 Grid、各格子狀態（包括數值與箭頭）以及高亮的最佳路徑。
-- **互動性**：使用者能否順利設定各格子狀態、使用清除與 Reset 功能，以及在計算最佳政策後獲得即時回饋。
+#### Deployment Platform:
+- Flask web application deployed locally or through a cloud service.
 
----
-
-## 6. 部署 (Deployment)
-
-本專案使用 Flask 作為後端框架，並採用 HTML/CSS/JavaScript 建立前端介面。部署步驟如下：
-1. **安裝依賴**：確保 Python 環境中已安裝 Flask
+#### Execution:
+1. Install Python dependencies:
    ```bash
    pip install flask
----
-## 7. 運行 (Run)
-
-本專案使用 Flask 作為後端框架，並採用 HTML/CSS/JavaScript 建立前端介面。運行步驟如下：
-1. **運行依賴**：
-   ```bash
    python app.py
