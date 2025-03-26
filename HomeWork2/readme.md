@@ -65,3 +65,6 @@ This project utilizes Flask to demonstrate a visual interactive implementation o
    ```bash
    pip install flask
    python app.py
+
+  ![螢幕擷取畫面 2025-03-26 195845](https://github.com/user-attachments/assets/1a215ca1-c8fe-4ecd-96f3-2da9fbb8bc5c)
+
