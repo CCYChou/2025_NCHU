@@ -68,3 +68,10 @@ This project utilizes Flask to demonstrate a visual interactive implementation o
 
   ![螢幕擷取畫面 2025-03-26 195845](https://github.com/user-attachments/assets/1a215ca1-c8fe-4ecd-96f3-2da9fbb8bc5c)
 
+  ### 7. YT Video
+
+For a video demonstration of the project, please click the link below:
+
+[Watch the demonstration on YouTube](https://youtu.be/6OTl4pQntUY?si=s82n52EX-5QZCU5o)
+
+
