@@ -22,6 +22,7 @@ Each algorithm is implemented as a Python function:
 ![Epsilon](https://github.com/user-attachments/assets/4ada4940-fbe9-43fb-b096-18ed7e75d0c8)
 
 2. **UCB1:** Confidence bound balancing using parameter c.
+
 ![UCB1](https://github.com/user-attachments/assets/27da68de-92c6-442f-a8d5-29b66815dc13)
 
 3. **Softmax:** Probability-weighted selection controlled by temperature τ.
