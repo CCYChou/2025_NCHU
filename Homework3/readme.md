@@ -20,10 +20,13 @@ This project implements four Bernoulli multi-armed bandit algorithms in a Colab-
 Each algorithm is implemented as a Python function:
 1. **Epsilon-Greedy:** Random vs. greedy selection controlled by parameter ε.
 ![Epsilon](https://github.com/user-attachments/assets/4ada4940-fbe9-43fb-b096-18ed7e75d0c8)
+
 2. **UCB1:** Confidence bound balancing using parameter c.
 ![UCB1](https://github.com/user-attachments/assets/27da68de-92c6-442f-a8d5-29b66815dc13)
+
 3. **Softmax:** Probability-weighted selection controlled by temperature τ.
 ![Softmax](https://github.com/user-attachments/assets/bc4a5a3f-cf2a-4465-847a-c9473d83752e)
+
 4. **Thompson Sampling:** Bayesian sampling with Beta priors (`α`, `β`).
 ![Thompson Sampling](https://github.com/user-attachments/assets/428162d5-0bcd-45f0-b412-339d41a2794a)
 
